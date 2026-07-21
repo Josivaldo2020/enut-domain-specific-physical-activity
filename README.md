@@ -13,7 +13,7 @@ The pipeline estimates population physical activity energy expenditure
 household income quintile, and computes attainment of the WHO aerobic
 equivalent under three progressively inclusive definitions.
 
-- **`code/01_build_domains.py`** (Python 3): reads the ENUT 2023 public
+- **`01_build_domains.py`** (Python 3): reads the ENUT 2023 public
   microdata, reconstructs the five domains (leisure-time exercise, unpaid
   domestic work, direct caregiving, paid work, travel), assigns MET values
   from the 2024 Adult Compendium (with recipient-age-specific values for
@@ -22,7 +22,7 @@ equivalent under three progressively inclusive definitions.
   and Sport), builds household income quintiles at the household level and
   merges them to persons, derives the WHO-attainment indicators, and writes a
   person-level analytic file (`enut_analytic.csv`).
-- **`code/02_survey_analysis.R`** (R): applies the complex survey design
+- **`02_survey_analysis.R`** (R): applies the complex survey design
   (strata, primary sampling units, person expansion factors) and reproduces
   the manuscript tables: domain and aggregate means with standard errors,
   WHO-equivalent attainment with 95% confidence intervals, and total
@@ -35,12 +35,12 @@ equivalent under three progressively inclusive definitions.
    `01_build_domains.py`. The file is comma-separated, latin-1 encoded.
 2. Run the Python builder:
    ```
-   python code/01_build_domains.py
+   python 01_build_domains.py
    ```
    This writes `enut_analytic.csv`.
 3. Run the R analysis:
    ```
-   Rscript code/02_survey_analysis.R
+   Rscript 02_survey_analysis.R
    ```
 
 ### Dependencies
