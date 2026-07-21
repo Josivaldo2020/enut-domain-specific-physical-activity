@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 code/01_build_domains.py
+
 Reconstructs the five physical activity energy expenditure domains
 (exercise, unpaid domestic work, direct caregiving, paid work, travel)
 from the Chilean Second National Time Use Survey (II ENUT 2023), assigning
@@ -261,3 +262,4 @@ print(f"Wrote {OUT_CSV}: {out.shape[0]} rows, {out.shape[1]} columns.")
 print("Crude population means by sex (1=men, 2=women):")
 print(out.groupby("sexo")[["ejer_pob", "trab_pob", "dom_pob", "cuid_pob",
                            "transp_pob", "gasto_total"]].mean().round(2))
+Move Python script to code directory
