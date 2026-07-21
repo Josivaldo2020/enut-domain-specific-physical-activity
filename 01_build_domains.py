@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-01_build_domains.py
-
+code/01_build_domains.py
 Reconstructs the five physical activity energy expenditure domains
 (exercise, unpaid domestic work, direct caregiving, paid work, travel)
 from the Chilean Second National Time Use Survey (II ENUT 2023), assigning
